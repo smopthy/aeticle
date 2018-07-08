@@ -9,17 +9,16 @@
 1.因为Medium 上面的一编文章： 
    [Learn to code in 2018, get hired, and have fun along the way] 
 2.讀研的時候，接觸SQL,SPSS,SAS等統計軟件，之後，對於ms-sql關聯表(RDDB)
-3.對於手機app的快速響應，想要增加工作處理數據的速度
+3.對於手機app的快速響應的軟件架構的好奇，病想要增加工作處理數據的速度
 4.嚮往讓數據漂亮的呈現
 
 
 學習資源：
 我的學習型態，希望可以透過視頻，和實例演練的方式進行
-1. cs50-
-2. codetraining 
-3. https://github.com/ruanyf/(剛接觸...)
-4. d3.vienno
-5. 
+1. cs50 https://www.youtube.com/user/cs50tv/featured
+2. the coding train https://www.youtube.com/user/shiffman/featured 
+3. d3.vienno https://www.youtube.com/user/d3Vienno
+4. https://github.com/ruanyf/(剛接觸...) 
 
 
 目標學習
