@@ -14,7 +14,6 @@
 
 
 學習資源：
-我的學習型態，希望可以透過視頻，和實例演練的方式進行
 1. cs50 https://www.youtube.com/user/cs50tv/featured
 2. the coding train https://www.youtube.com/user/shiffman/featured 
 3. d3.vienno https://www.youtube.com/user/d3Vienno
