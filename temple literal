@@ -1,0 +1,23 @@
+模版字符串（template literal）
+
+`this is phrase` 
+左右上面兩個小撇，是在es6之後的一個新的功能
+
+兩個小撇具備有下列幾個功能：
+
+1. 可以把裡面換行格式保留 
+例如： 
+const apple = 
+<html>
+    <head>
+    </haed>
+    <body>
+    </body>
+</html>
+
+2. `${}`
+可攜帶變量(variable)在衣長字串裡面
+例如：
+const apple = 2 
+
+conosle.log (`i have ${apple} banana`) // i have 2 banana
