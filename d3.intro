@@ -1,0 +1,35 @@
+d3.v3 的library 
+d3.v4 的library
+d3.v5 的library
+
+d3.的v3與v4是用之前的版本 
+把檔案會進來的方式 為d3.csv.("filename.csv",function(){...})的方式把檔案load進來
+
+d3也是一種的方法有點像是無中生有的方式，常常先selectall（“elemnet"）
+之後，在append進入你的DOM 
+.d3.select
+.attr 
+
+1. d3.的顯示圖，適用svg，就是向量圖的類型 
+   簡單的svg出圖：
+  <svg>
+  <circle cx=“100”,cy=“100”,r =”“15></circel>
+  <circle cx=“200”,cy=“100”,r =”“15></circel>
+  <circle cx=“300”,cy=“100”,r =”“15></circel>
+  </svg>
+   
+2. 呈上，因此，所有的開始可以先處理canvas的長寬。
+   兩種：
+   (1) 你已經在html DOM 匡架裡面先設置好svg 的height、weight 
+    <svg id canvas height ="1200" width="1200"></svg> 
+   (2) 就是自己用寫
+    d3.select("body").append(“svg)
+      .attr("height",1200)
+      .attr("weight",1200)
+   (3)
+   
+     
+3.d3.的產生，是從視窗左上角為原坐標，所以常用一個功能，就("transform","translate("x","y")")
+
+
+
