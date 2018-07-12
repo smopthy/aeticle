@@ -1,3 +1,5 @@
+<url> : 
+
 d3.v3 的library 
 d3.v4 的library
 d3.v5 的library
@@ -26,10 +28,50 @@ d3也是一種的方法有點像是無中生有的方式，常常先selectall（
     d3.select("body").append(“svg)
       .attr("height",1200)
       .attr("weight",1200)
-   (3)
-   
      
 3.d3.的產生，是從視窗左上角為原坐標，所以常用一個功能，就("transform","translate("x","y")")
+  通常會讓一整個控制組，的起始座標往x,y方向移動
 
+4.workinh with data 
+  (1)目前有經驗的是兩個格式csv, json 
+  d3.csv("filename.scv" , function(){...})
+  d3.json("filename.json" , funciton(){...})
+  
+  備註：在p5.js load data的方式也很類似
+  base on p5.js:
+  
+  (2)data 的數量與DOM node 數
+   標準寫法：
+   d3.csv("filename.scv" , function(d){
+    canvas.d3.select("g")
+      .data(d)
+      .enter()
+      .append(“g") 
+      .attr("envent",callback)
+    })
+      以上，的enter（）部分常用的共有三種：
+      1.enter() DOM ELEMENT < DATA 
+      2.exit()  DOM ELEMENT > DATA 
+      3.upload() DOM ELEMENT = DATA 
+     
+5.interaction 
+  v3 = >	circles.transition()
+			.duration(1500)
+			.attr("cx" , 150)
+			.each("end" , function (){d3.select(this).attr("fill","blue")})
+  
+  v4 => .circles.transition()
+			.duration(1500)
+			.attr("cx" , 150)
+			.on("end" , function (){d3.select(this).attr("fill","blue")})
+         
+6. 
+ 
+      
+    
+     
+
+  
+  
 
 
