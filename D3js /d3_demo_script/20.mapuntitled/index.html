@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	<script src="https://d3js.org/d3-hierarchy.v1.min.js"></script> -->
+<!-- 	<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+
+	<title>again</title>
+
+	<script src="libraries/d3vs.js"></script>
+
+	<style></style>
+</head>
+<body>
+	<!-- <svg id = "canvas" height = "1500px" width = "1500px"> </svg>  -->
+	<script >
+		// topic : map  
+
+		var canvas = d3.select("body").append("svg")
+			.attr("width" ,760)
+			.attr("height",700)
+
+
+		d3.json("AFG.json", function(d){
+
+			console.log(d.features)
+
+			var group = canvas.append("g")
+				.data(d)
+				.enter()
+				.append("g")
+				
+			var projection = d3.geo.mercator()
+			var path = d3.geo.path().projection(projection)
+			//trenslate all the data to the pixels
+
+			var area = group.append("path")
+				.attr("d" , path)
+				.attr("class" , "area")
+				.attr("fill","black")
+
+		})
+
+
+
+
+
+	</script>
+</body>
+</html>

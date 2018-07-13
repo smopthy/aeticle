@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>again</title>
+
+	<script src="libraries/d3.js"></script>
+<!-- 	<script src="ddd.js"></script> -->
+	<style></style>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		//create data array 
+		var arr = [ 20 ,40 ,50  ]
+
+		//create the canvas 
+		var canvas = d3.select("body")
+						.append("svg")
+						.attr("width" , 600)
+						.attr("height" ,1200);
+
+		//ceate the bar with data 
+		var bar = canvas.selectAll("rect")
+						.data(arr)
+						.enter() 
+						// this enter blind to the data , and every data ele willblind to the rect 
+							.append("rect")
+							.attr("width" , function (d){
+								return d  ;
+							})
+							.attr("height" , 50 )
+							.attr("y" , function (d , i ){return i * 100} )
+
+
+	</script>
+</body>
+</html>

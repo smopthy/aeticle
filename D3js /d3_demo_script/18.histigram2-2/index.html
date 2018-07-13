@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	<script src="https://d3js.org/d3-hierarchy.v1.min.js"></script> -->
+<!-- 	<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+
+	<title>again</title>
+
+	<script src="libraries/d3vs.js"></script>
+
+	<style></style>
+</head>
+<body>
+	<!-- <svg id = "canvas" height = "1500px" width = "1500px"> </svg>  -->
+	<script >
+		// topic : population
+
+
+		d3.csv("population_age.csv", function(data){
+
+
+				var width = 400 ; 
+				var height = 400 ;
+				var padding = 50 ;
+
+				var map = data.map(function (d){return parseInt(d.age)})
+				// console.log(map)
+
+				var histogram = d3.layout.histogram()
+					 .bins(8) 
+					(map)
+					// bin ： 分組
+					//find the specify data
+					console.log(histogram)
+					//dx = > 長條圖的width;, x => 起點 Y 高度 
+
+				//2-1 star : 
+				var y = d3.scale.linear()
+					      .domain([0,d3.max(histogram.map(function(d){return d.length}))])
+					      .range([0,height])
+
+				var x = d3.scale.linear()
+						  .domain([0,d3.max(map)])
+						  .range([0,width])
+
+				var xAxis = d3.svg.axis()
+					.scale(x)
+					.orient("bottom");
+
+
+				var canvas = d3.select("body").append("svg")
+					.attr("width",width+ padding  )
+					.attr("height",height+ padding )
+					.append("g")
+						.attr("transform","translate(20,0)")
+
+				var group = canvas.append("g")
+					.attr("transform","translate(0 ,"+height+")") 
+					.call(xAxis)
+
+				var bar = canvas.selectAll(".bar")
+					.data(histogram)
+					.enter()
+					.append("g")
+
+				bar.append("rect")
+					.attr("x" , function (d){return x(d.x)})
+					// .attr("y" , 0)
+					.attr("y" , function (d ) {return 400 - y(d.y)}) 
+					.attr("width" , function(d) {return x(d.dx) ; })
+					.attr("height" , function(d) { return y(d.y)})
+					.attr("stroke","black")
+					.attr("fill","pink")
+
+				bar.append("text")
+					.attr("x",function(d){return x(d.x)})
+					.attr("y", function(d){return 400 - y(d.y)})
+					.attr("dy","")
+					.attr("dx",function(d){return  x(d.dx)/2})
+					.attr("fill","black")
+					.attr("text-anchor" , "middle")
+					.text(function(d){return d.y})
+
+
+		})
+
+
+	</script>
+</body>
+</html>

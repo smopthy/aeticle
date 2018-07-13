@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>again</title>
+
+	<script src="../libraries/d3.js"></script>
+<!-- 	<script src="ddd.js"></script> -->
+	<style></style>
+</head>
+<body>
+
+	<script >
+		// topic : loading external data 
+		//json 
+		// d3.json("student.csv", function(date){...})
+		//csv
+		// d3.csv("student.csv", function(date){...})
+
+		d3.json("student.json").then(function(data) {
+
+			var canvas = d3.select("body").append("svg")
+					.attr("width",500)
+					.attr("height",500)
+
+				var group = canvas.selectAll("rect")
+					.data(data)
+					.enter()
+					.append("rect")
+  					.attr("width",function(d){return d.age * 10 })
+					.attr("height",40)
+					.attr("y",function(d,i){return i * 50 })
+					.attr("fill","pink")
+
+				canvas.selectAll("text")
+					.data(data)
+					.enter()
+					.append("text")
+					.attr("fill","black")
+					.attr("y",function(d,i){return i * 50 +20})
+					.text(function (d){return d.name})
+			
+		})
+
+
+	</script>
+</body>
+</html>

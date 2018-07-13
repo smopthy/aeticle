@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>again</title>
+
+	<script src="../libraries/d3.js"></script>
+<!-- 	<script src="ddd.js"></script> -->
+	<style>
+		
+
+
+	</style>
+</head>
+<body>
+
+	<script >
+		//translation 
+
+		  var data = [40]
+
+		 var canvas = d3.select("body")
+		 				.append("svg")
+		 				.attr("width" , 500 )
+		 				.attr("height" , 500)
+
+		 var circles = canvas.append("circle")
+		 					.attr("cx" , 30 )
+		 					.attr("cy" , 100)
+		 					.attr("r"  , 15)
+		 					.attr("fill" , "pink") 
+
+
+		circles.transition()
+			.duration(1500)
+			.attr("cx" , 150)
+			.on("end" , function (){d3.select(this).attr("fill","blue")})
+
+
+
+		// circles.transition()
+		// 	.duration(1500)
+		// 	.delay(2000)
+		// 	.attr("cx" , 150)
+		// 	.transition()
+		// 	.attr("cy", 150)
+		// 	.attr("fill","green");
+		// 	// after transition deing change 
+
+
+
+
+
+
+	</script>
+</body>
+</html>

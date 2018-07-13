@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>again</title>
+
+	<script src="../libraries/d3.js"></script>
+<!-- 	<script src="ddd.js"></script> -->
+	<style></style>
+</head>
+<body>
+	<svg id = "canvas" height = "1500px" width = "1500px"> </svg> 
+	<script >
+		// topic : path()
+		// arc 是利用周長去化製arc的圖型
+		// two way to create the arc 
+		// path , layout 
+		// using the layour : let every data in array into the object ,
+		// and have the start-angle and end-angel 
+
+		const data = [10 ,50 ,80] ;
+		const r  = 200;
+
+		var color = d3.scaleOrdinal()
+				.range(["yellow" , "orange"])
+
+		const canvas = d3.select("#canvas")
+
+		let  group = canvas.append("g")
+				.attr("transform","translate(300,300)");
+
+		let arc = d3.arc()
+			.innerRadius(100)
+			.outerRadius(r)
+
+		let pie = d3.pie()
+			.value(function(d){return d})
+
+		const arcs = group.selectAll(".arc") 
+		       // select all the class arc
+		       .data(pie(data))
+		       .enter()
+		       .append("g")
+		       .attr("class" , "arc")
+
+		arcs.append("path")
+		 	   .attr("d" , arc)
+		 	   .attr("fill" , function(d) {return color(d.data)})
+
+		arcs.append("text")
+				.attr("transform", function (d){return "translate(" + arc.centroid(d) + ")"})
+				//style
+				.attr("text-anchor", "middle")
+				.attr("font-size","1.5em")
+				// //put the text into center of arc
+				.text(function(d){return d.data}) 
+
+		
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>again</title>
+
+	<script src="../libraries/d3.js"></script>
+<!-- 	<script src="ddd.js"></script> -->
+	<style>
+		
+
+
+	</style>
+</head>
+<body>
+
+	<script >
+		 //  DOM element < data elements  (enter )
+		 //  DOM element > data elements   (exit)
+		 //  DOM elemenet = data element   (update)
+
+		  var data = [40,30,30,30]
+
+		 var canvas = d3.select("body")
+		 				.append("svg")
+		 				.attr("width" , 500 )
+		 				.attr("height" , 500)
+
+		 var circles = canvas.append("circle")
+		 					.attr("cx" , 30 )
+		 					.attr("cy" , 230)
+		 					.attr("r"  , 15) 
+
+		 var circles2 = canvas.append("circle")
+		 					.attr("cx" , 30 )
+		 					.attr("cy" , 150)
+		 					.attr("r"  , 15)
+		 					.attr("fill" , "pink") 
+
+		 var circle = canvas.selectAll("circle")
+		 				.data(data)				
+		 				.attr("fill","red")
+		 				.enter()
+		 				// // update selection 
+		 				// .enter()
+		 				// 	.append("circle")
+		 				// 	.attr("cx" , 30 )
+		 				// 	.attr("cy" , 100)
+		 				// 	.attr("fill" , "green")
+		 				// 	.attr("r"  , 15)
+		 				//enter selection 
+
+		 				//exit selection
+		 				// .exit()
+		 				.attr("fill","yellow") 
+
+
+
+	</script>
+</body>
+</html>

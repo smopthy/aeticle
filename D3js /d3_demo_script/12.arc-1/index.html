@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>again</title>
+
+	<script src="../libraries/d3.js"></script>
+<!-- 	<script src="ddd.js"></script> -->
+	<style></style>
+</head>
+<body>
+
+	<script >
+		// topic : path()
+		// arc 是利用周長去化製arc的圖型
+
+		var canvas = d3.select("body").append("svg")
+			.attr("width",500)
+			.attr("height",500)
+
+		var group = canvas.append("g")
+				.attr("transform" , "translate(100 ,100)");
+
+		var r = 100  
+		var r2 = 80 
+		var p = Math.PI*2 
+
+
+		var arc = d3.arc()
+		    .innerRadius(r2)
+		    .outerRadius(r)
+		    .startAngle(0)
+		    .endAngle( p - 1 );
+
+		group.append("path")
+			.attr("d",arc)
+
+
+
+	</script>
+</body>
+</html>

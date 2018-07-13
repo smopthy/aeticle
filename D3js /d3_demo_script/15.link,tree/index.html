@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>again</title>
+
+	<script src="libraries/d3.js"></script>
+<!-- 	<script src="ddd.js"></script> -->
+	<style></style>
+</head>
+<body>
+	<svg id = "canvas" height = "1500px" width = "1500px"> </svg> 
+	<script >
+		// topic : pre-set dia diagonal
+
+		var canvas = d3.select("#canvas")
+
+		 var data = [{
+		    source: {y: 150,x: 75
+		    },
+		    target: {y: 300,x: 0
+		    }
+		}];
+
+		let  group = canvas.append("g")
+		.attr("transform","translate(300,300)");
+
+
+		var link = d3.linkHorizontal()
+    		.x(function(d) { return d.y; })
+    		.y(function(d) { return d.x; });
+
+		group.selectAll("path")
+				//create  the path 
+				.data(data)
+				//bind the data in to the array
+				.enter()
+				.append("path")
+				.attr("d",link)
+				.attr("fill","none")
+				.attr("stroke","red")
+				.attr("stroke-width",10)
+
+		
+
+
+
+
+
+	</script>
+</body>
+</html>
