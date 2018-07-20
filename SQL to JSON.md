@@ -3,7 +3,7 @@
 ##### i think this is a conveince way to conevr data to JSON . 
 
 
->>\#####<note1>
+>
 ##### transform relation /  tabluar data to JSON 
     
     select charge_code , charge_name 
@@ -12,7 +12,7 @@
 
 
 
->>\#####<note2>
+>
 #### --- transform data / tablar to JSON / name the parent node  
     select b.charge_code , b.order_rate , b.exe_rate , 
            a.nurse_treatment as 'nuse_rate.nure_treatement', 
@@ -20,7 +20,7 @@
     from   nurse_treatement a left join  doc_rate b on  a.charge_code =b.charge_code 
     for    JSON PATH 
 
->>\#####<note3 >
+>
 ##### create differen parent node 
 
     select  id  as 'pat_record.id ', 
