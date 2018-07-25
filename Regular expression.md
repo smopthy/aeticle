@@ -1,4 +1,4 @@
-#### regular expression   
+### Regular Expression   
 給予電腦一個收尋的pattern 
 
  兩種表達式  
@@ -36,26 +36,26 @@ script
 |\s  space , tab    如果是\W 就是代表不找  space , tab  | ? 0 or 1         |         | \b  words bondry
 | . any char whatso ever               | {min ,max } or  { n }         |         | 
 
-例子：
+#### exmple1 ：
 
        there are some phone numbers 917-555-090 in the article 
        call call me at 545.555.989 and of course 
        Im  always reachable at (02)888.090.50t
  
- find script
+#### exmple1 script
        
         \d\w  
 
-例子：
+#### exmple2：
        
         the color of the raibow have many colours and the 
         raindow 	does not have a single colour  
         
- find script 
+#### exmple2 script 
  
         colou?ors? 
         
-例子：
+#### exmple3：
  
     This is something 
     is about  
@@ -67,20 +67,10 @@ script
     Goodbye and 
     Go go go rainbow ! 
     
-find script  
+#### exmple3 script  
 
     ^\w+$ (找word and apple )
     \w+$ (找每一行的最後一個字)
     ＾\w (找每一行的第一個字)
     \w{4} (找每個字母的頭四的字)
     \b\w{4}\b (找只有四個字母的字 )
-
-
-        
-       
- 
-
-
-
-
-
