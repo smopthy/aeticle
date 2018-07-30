@@ -22,6 +22,9 @@
 		 .attr("y",function(d , i ) {return i * 100})
              // d 為data , i 指的是 index
  
+ 關於data的截取依據數量惡多寡分三類：
+ 
+
  
 
 
