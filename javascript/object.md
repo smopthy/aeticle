@@ -15,3 +15,19 @@
 ``` 
      let pokemon = new Object() ; 
 ```
+    let pTYPE = {
+    name = "Gary " , 
+    age = "32"
+    }
+    
+    let pokemon = new Obejct() 
+    pokemon["effective"]="strong"
+    pokemon["weight]=25.5
+    pokemon["height"]=0.99
+    pokemon.type = pTYPE 
+    pTYPE["APPLE"] = ["paly", "joy" , " fragemnence"]
+```
+
+
+3. JavaScript Iteration for of loop versus for loop
+    
