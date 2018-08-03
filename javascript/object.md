@@ -26,8 +26,8 @@
     pokemon["height"]=0.99
     pokemon.type = pTYPE 
     pTYPE["APPLE"] = ["paly", "joy" , " fragemnence"]
-```
+````
 
+/3. JavaScript Iteration for of loop versus for loop
 
-\3. JavaScript Iteration for of loop versus for loop
-    
+````
