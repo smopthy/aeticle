@@ -29,5 +29,5 @@
 ```
 
 
-3. JavaScript Iteration for of loop versus for loop
+\3. JavaScript Iteration for of loop versus for loop
     
