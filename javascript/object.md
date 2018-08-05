@@ -76,7 +76,16 @@ var myIterator = apple[Symbol.Iterator()]
 	 }
  6. Working with JS Object keys() and values() Functions 
  
- 
- 
-     
+```let pType = { 
+   name : "Gary" ,
+   age : 45 , 
+   effectiveAgaist : ["Dark" , "Psychic" , "Grass"] 
+}
+   let apple = Object.keys(pType) 
+   let banana = Obejtc.values(pType)
+   console.log(apple)
+   console.log(banana)
+````
+
+
     
